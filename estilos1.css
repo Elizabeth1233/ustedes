@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, section{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  section{
+    background-color:#0099CC;
+    color:#fff;
+    font-family: Helvetica;
+  }
+  
+  
+  h1{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    width: 100%;
+    font-size:90px;
+    margin:0;
+  }
+  
+  a{
+    position: absolute;
+    color: #0099CC;
+    background-color:rgb(206, 215, 235);
+    text-decoration: none;
+    padding:5px 15px;
+    border-radius:25px;
+    font-size:20px;
+    bottom: 20px;
+    left:50%;
+    transform: translateX(-50%);
+  }
+  
+  #dos{
+    background-color:#15b22f;
+  }
+  
+  #dos a{
+    color:#15b22f;
+  }
+  
+  #uno.muestra, #dos.muestra{
+    position:absolute;
+    top:0;
+    z-index:1;
+    transform-origin:top center;
+    animation: iconosani 1.2s forwards;
+  }
+  
+  @keyframes iconosani {
+      0% {
+          transform: perspective(800px) rotateX(-90deg);
+          opacity: 1;
+      } 
+      40% {
+          transform: perspective(800px) rotateX(30deg);
+          opacity: 1;
+      }
+      70% {
+          transform: perspective(800px) rotateX(-10deg);
+      }
+      100% {
+          transform: perspective(800px) rotateX(0deg);
+          opacity: 1;
+      }
+  }
+body{
+    font-family: 'Alumni Sans Inline One', cursive;
+    font-family: 'Merienda', cursive;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Sacramento', cursive;
+    font-family: 'Satisfy', cursive;
+    font-family: 'Lobster', cursive;
+}
+header{
+    width: 100%;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+}
+video{
+    width: 100%;   
+}
+.absolute{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    position: absolute;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    font-size: 80px;
+    font-weight: 900;
+    z-index: 100;
+    color: rgb(161, 181, 213);
+    margin-bottom: 30px;
+   
+}
+h1::after{
+    display: block;
+    width: 30%;
+    height: 10px;
+    content: "";
+    margin: auto;
+    background: rgb(192, 164, 241);
+}
+
+
+@media screen and (max-width:800px) {
+    h1{
+        font-size: 50px;
+    }
+    
+}
+@media screen and (max-width:500px) {
+    h1{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    h1::after{
+        display: none;
+    }
+    
+}
+h2{
+    font-size: 80px;
+    font-weight: 900;
+    z-index: 100;
+    color: rgb(167, 245, 193);
+    margin-bottom: 30px;
+}
+

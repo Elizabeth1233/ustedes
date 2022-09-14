@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Círculo de Estudios Alexander Grothendieck</title>
+    <style>
+       body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: linear-gradient(150deg,#b9babb,#d5d6d7,#fdfdfd,#c1b7b4);
+    height: 100vh;
+    
+    
+      
+    
+}
+
+        
+        div{
+            text-align: center;
+            margin: 50px;
+        }
+        input{
+            border: 1px solid rgb(5, 3, 34);
+            margin-right: 20px;
+            height: 30px;
+        }
+        table{
+            border: 1px solid rgb(108, 107, 107);
+            width: 500px;
+            margin: auto;
+        }
+        th,td{
+            border: 1px solid rgb(10, 10, 10);
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body><br><br><br><br><br><br><br>
+
+    <div>
+        <input type="text" id="id" placeholder="Por favor ingrese su Ciclo">
+        <input type="text" id="name" placeholder="Por favor escriba su nombre">
+        <input type="text" id="sex" placeholder="Por favor ingrese su Escuela">
+        <input type="button" id="add" value="Añadir">
+    </div>
+
+    <table>
+        <caption>Formulario de información del estudiante<br><br></caption>
+        <tr style="background: rgba(20, 131, 172, 0.3); border: 1px solid rgba(176, 175, 245, 0.3);">
+            <th>Ciclo</th>
+            <th>Nombre</th>
+            <th>Escuela</th>
+            <th>Acciones</th>
+        </tr>
+
+        <tr>
+            <td>--VI--</td>
+            <td>--_____-- ________--</td>
+            <td>--_______________--</td>
+            <td><a href="javascript:void(0);" onclick="del_tr(this);">Eliminar</a></td>
+        </tr>
+
+        
+
+    </table>
+    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+        <a class="dropdown-item" href="login.html"><i>Para completar el registro</i> <b><b>"Da Click"</b></b></a></div>
+        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+            <a class="dropdown-item" href="alumt.html"><b><b>"Volver"</b></b></a></div>
+    <script>
+        // Agrega un evento de clic al botón
+        document.getElementById("add").onclick = function () {
+            // Obtiene el valor del cuadro de entrada
+            var id_text = document.getElementById("id").value;
+            var name_text = document.getElementById("name").value;
+            var sex_text = document.getElementById("sex").value;
+
+           // Usa innerHTML para agregar
+            var table_node = document.getElementsByTagName("table")[0];
+            // Agrega una línea
+            table_node.innerHTML += "       <tr>\n" +
+                "            <td>"+id_text+"</td>\n" +
+                "            <td>"+name_text+"</td>\n" +
+                "            <td>"+sex_text+"</td>\n" +
+                "<td> <a href=\"javascript:void(0);\" οnclick=\"del_tr(this);\"> Eliminar </a> </td> \ n" +
+                "        </tr>";
+        }
+        del_tr = function (obj) {// Devuelto es el objeto de la etiqueta a
+            // Eliminar nodos secundarios a través del nodo principal
+            // Elimina tr a través de la tabla, obtén el nodo de la tabla primero
+            var table_node = obj.parentNode.parentNode.parentNode;
+            table_node.removeChild(obj.parentNode.parentNode);
+        }
+    </script>
+</body>
+</html>
